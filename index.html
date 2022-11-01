@@ -13,19 +13,21 @@
   <div class="relative z-10">
     <img src="https://i.ibb.co/JmJ2FPF/landing-page-audio.jpg" alt="">
   </div>
-  <div>
+  <div class="absolute">
     <audio id="mySound" autoplay controls>
       <source src="./assets/CLARO_GP_BRASIL_02.mp3" type="audio/mpeg">
     </audio>
-    <button onclick="musicPlay()">click</button>
+    <button onclick='musicPlay()'>click</button>
     <p id="x"></p>
   </div>
   <script>
     // document.addEventListener('loaded', musicPlay);
     function musicPlay () {
-      const x = document.getElementById('mySound').autoplay();
-      // document.removeEventListener('click', musicPlay);
-      document.getElementById("x").innerHTML = x;
+      window.onload = function () {
+        const x = document.getElementById('mySound').autoplay();
+        // document.removeEventListener('click', musicPlay);
+        document.getElementById("x").innerHTML = x;
+      };
     }
   </script>
 </body>
